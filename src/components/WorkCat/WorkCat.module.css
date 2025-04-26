@@ -1,0 +1,13 @@
+
+.container{
+    padding-top:.5rem;
+    display:flex;
+    justify-content: center;
+    align-items:center;
+}
+.picture{
+    height: 5rem;
+    width: 5rem;
+    background-color:aliceblue;
+    
+}
