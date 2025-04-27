@@ -3,6 +3,7 @@ import dumb from '../../assets/dumb.webp'
 import illegal from '../../assets/illegal.webp'
 import junior from '../../assets/junior.webp'
 import steady from '../../assets/steady.webp'
+import glass from '../../assets/glasses_no_bg.png'
 import ImageCompoennet from '../ImageComponent/ImageComponent'
 
 interface Props{
@@ -10,11 +11,11 @@ interface Props{
 }
 
 const WorkCat = ({count}:Props) => {
-  return (
-    <div>
-        WorkCat: {count}
 
-        <div className={styles['container']}>
+  return (
+    <div className={styles['container']}>
+
+        <div className={styles['img-container']}>
             
             {(count<=5)
             ?<ImageCompoennet src={dumb} hash='LiEyPhRk%MRj~qofofWB-;oyM{j['/>
@@ -24,8 +25,12 @@ const WorkCat = ({count}:Props) => {
                     ?<ImageCompoennet src={junior} hash='LjEfKKWBxuRj~qofofWB-;ofM{j['/>
                     :<ImageCompoennet src={steady} hash='LjEfKKWBxuRj~qofofWB-;ofM{j['/>}
             
-            
         </div>
+
+        {(count>=35)  &&
+        <div className={styles['glass']}>
+            <img src={glass} alt='glass' height={100}/>
+        </div>}
         
     </div>
   )
