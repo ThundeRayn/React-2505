@@ -1,8 +1,8 @@
 import styles from './WorkCat.module.css'
-import dumb from '../../assets/dumb.png'
-import illegal from '../../assets/illegal.png'
-import junior from '../../assets/junior.png'
-import steady from '../../assets/steady.png'
+import dumb from '../../assets/dumb.webp'
+import illegal from '../../assets/illegal.webp'
+import junior from '../../assets/junior.webp'
+import steady from '../../assets/steady.webp'
 import ImageCompoennet from '../ImageComponent/ImageComponent'
 
 interface Props{
@@ -17,12 +17,12 @@ const WorkCat = ({count}:Props) => {
         <div className={styles['container']}>
             
             {(count<=5)
-            ?<ImageCompoennet src={dumb}/>
+            ?<ImageCompoennet src={dumb} hash='LiEyPhRk%MRj~qofofWB-;oyM{j['/>
             :(count<=17)
-                ?<img src={illegal} alt='illegal' height={150}/>
+                ?<ImageCompoennet src={illegal} hash='LjEfKKWBxuRj~qofofWB-;ofM{j['/>
                 :(count<=25)
-                    ?<img src={junior} alt='illegal' height={150}/>
-                    :<img src={steady} alt='illegal' height={150}/>}
+                    ?<ImageCompoennet src={junior} hash='LjEfKKWBxuRj~qofofWB-;ofM{j['/>
+                    :<ImageCompoennet src={steady} hash='LjEfKKWBxuRj~qofofWB-;ofM{j['/>}
             
             
         </div>

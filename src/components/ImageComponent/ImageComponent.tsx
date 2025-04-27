@@ -3,9 +3,10 @@ import { Blurhash } from "react-blurhash";
 
 interface Props{
     src:string;
+    hash:string;
 }
 
-export default function ImageCompoennet({src}:Props){
+export default function ImageCompoennet({src,hash}:Props){
     
     const [imageLoaded,setImageLoaded] = useState(false);
     
@@ -21,8 +22,8 @@ export default function ImageCompoennet({src}:Props){
     <>
         {!imageLoaded && (
             <Blurhash
-                hash="LiEyPhRk%MRj~qofofWB-;oyM{j["
-                height={250}
+                hash={hash}
+                height={150}
                 resolutionX={32}
                 resolutionY={32}
                 punch={1}
