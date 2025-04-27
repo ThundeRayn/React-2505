@@ -4,6 +4,7 @@ import illegal from '../../assets/illegal.webp'
 import junior from '../../assets/junior.webp'
 import steady from '../../assets/steady.webp'
 import glass from '../../assets/glasses_no_bg.png'
+import cigarette from '../../assets/cigarette.webp'
 import ImageCompoennet from '../ImageComponent/ImageComponent'
 
 interface Props{
@@ -30,6 +31,11 @@ const WorkCat = ({count}:Props) => {
         {(count>=35)  &&
         <div className={styles['glass']}>
             <img src={glass} alt='glass' height={100}/>
+        </div>}
+
+        {(count>=50)  &&
+        <div className={styles['cigarette']}>
+            <img src={cigarette} alt='cigarette' height={25}/>
         </div>}
         
     </div>

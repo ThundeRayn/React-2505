@@ -20,9 +20,8 @@
 .glass{
     position:absolute;
     left:105px;
-    top: 0px;
     justify-content: center;
-    z-index: 1;
+    z-index: 2;
     transform: rotate(-20deg);
 
     animation: 2s linear 0s slide 1 forwards;
@@ -34,6 +33,35 @@
     from { top: -10px; }
     to {
       top:27px;
-      
     }
   }
+
+.cigarette{
+    position:absolute;
+    left:170px;
+    top: 95px;
+    justify-content: center;
+    z-index: 2;
+    transform: rotate(-240deg);
+
+    animation: 2s linear 0s rotate 1 forwards;
+   
+}
+
+@keyframes rotate {
+    0% {
+        top:0;
+        left: 190px;
+        transform: rotate(40deg);
+    }
+    40% {
+        top:55px;
+        left:230px;
+        transform: rotate(240deg);
+    }
+    100% {
+        top:95px;
+        left:170px;
+        transform: rotate(30deg);
+    }
+}
