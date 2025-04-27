@@ -3,6 +3,7 @@ import dumb from '../../assets/dumb.png'
 import illegal from '../../assets/illegal.png'
 import junior from '../../assets/junior.png'
 import steady from '../../assets/steady.png'
+import ImageCompoennet from '../ImageComponent/ImageComponent'
 
 interface Props{
     count:number;
@@ -16,7 +17,7 @@ const WorkCat = ({count}:Props) => {
         <div className={styles['container']}>
             
             {(count<=5)
-            ?<img src={dumb} alt='dumb' height={150}/>
+            ?<ImageCompoennet src={dumb}/>
             :(count<=17)
                 ?<img src={illegal} alt='illegal' height={150}/>
                 :(count<=25)
