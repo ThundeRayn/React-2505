@@ -65,3 +65,15 @@
         transform: rotate(30deg);
     }
 }
+
+.navigate-btn{
+    padding-top:1rem;
+    display:inline-block;
+    align-items: center;
+    justify-content: center;
+}
+
+.hint{
+    display:block;
+    padding-bottom: 1rem;
+}

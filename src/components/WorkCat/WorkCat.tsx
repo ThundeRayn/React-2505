@@ -37,6 +37,19 @@ const WorkCat = ({count}:Props) => {
         <div className={styles['cigarette']}>
             <img src={cigarette} alt='cigarette' height={25}/>
         </div>}
+
+        {(count>=70)  &&
+        <div className={styles['navigate-btn']}>
+            <code className={styles['hint']}>
+                恭喜解锁大女猫成就</code>
+            <code className={styles['hint']}>
+            ↓↓↓↓↓↓</code>
+            <a href='http://xhslink.com/a/196dSgJZccfbb'>
+                <button className={styles['btn']}>
+                点击了解尾尾对你的期待</button></a>
+        </div>}
+
+        
         
     </div>
   )
