@@ -8,7 +8,7 @@ export default defineConfig({
     react(),
     VitePWA({
       registerType: 'autoUpdate',
-      includeAssets: ['/public/Adobe_2505_192px.png'], // optional extra assets
+      includeAssets: ['/public/Adobe_2505_192px.png','/public/icon2505_512.png'], // optional extra assets
       manifest: {
         name: '2505Forever',
         short_name: '2505',
