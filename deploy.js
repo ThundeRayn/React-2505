@@ -11,7 +11,7 @@ const config = {
   host:  "frs.bcd.temporary.site",
   port: 21,
   localRoot: path.resolve("./dist"),
-  remoteRoot: "/public_html/website_a31bdcb2",
+  remoteRoot: "/",
   include: ["*", "**/*"],
   deleteRemote: true,
   forcePasv: true,
