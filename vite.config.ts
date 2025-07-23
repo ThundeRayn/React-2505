@@ -8,7 +8,7 @@ export default defineConfig({
     react(),
     VitePWA({
       registerType: 'autoUpdate',
-      includeAssets: ['/public/Adobe_2505_192px.png','/public/icon2505_512.png'], // optional extra assets
+      includeAssets: ['/public/2505Icon_512.png','/public/2505Icon_192.png'], // optional extra assets
       manifest: {
         name: '2505Forever',
         short_name: '2505',
@@ -19,17 +19,17 @@ export default defineConfig({
         theme_color: '#000000',
         icons: [
           {
-            src: '/Adobe_2505_192px.png',
+            src: '/2505Icon_192.png',
             sizes: '192x192',
             type: 'image/png'
           },
           {
-            src: '/icon2505_512.png',
+            src: '/2505Icon_512.png',
             sizes: '512x512',
             type: 'image/png'
           },
           {
-            src: '/icon2505_512.png',
+            src: '/2505Icon_512.png',
             sizes: '512x512',
             type: 'image/png',
             purpose: 'maskable'
