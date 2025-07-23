@@ -3,6 +3,11 @@
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
+
+  /*user select and drag*/
+  -webkit-user-drag: none; /* Chrome */
+  user-select: none;       /* 禁止文字选择 */
+  overflow-x: hidden;
 }
 
 .logo {

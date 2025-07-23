@@ -7,7 +7,8 @@
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "deploy": "npm run build && node deploy.js"
   },
   "dependencies": {
     "blurhash": "^2.0.5",
@@ -23,6 +24,7 @@
     "eslint": "^9.22.0",
     "eslint-plugin-react-hooks": "^5.2.0",
     "eslint-plugin-react-refresh": "^0.4.19",
+    "ftp-deploy": "^2.4.7",
     "globals": "^16.0.0",
     "jest": "^29.7.0",
     "typescript": "~5.7.2",
@@ -30,7 +32,7 @@
     "vite": "^6.3.1",
     "vite-plugin-pwa": "^1.0.1"
   },
-  "description": "This is ``2505forever.com`` web ``2025 April.27`` when I'm still looking for job Queenie is going to TRT for master Roy at Henan due to the Study Permit issue Chloe graduated and ready to go back China for her mental health (really?)",
+  "description": "This is ``2505forever.com`` web ``2025 April.27`` when I'm still looking for job Queenie is going to TRT for master Roy at Henan due to the Study Permit issue Chloe graduated and ready to go back China for her mental health. I wish we are all fine.",
   "main": "eslint.config.js",
   "keywords": [],
   "author": "",
