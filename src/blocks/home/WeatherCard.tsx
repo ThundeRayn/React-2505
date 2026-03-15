@@ -12,12 +12,11 @@ export default function WeatherCard() {
 
   useEffect(() => {
     let cancelled = false;
-    const now = Date.now();
-    if (now - lastFetch.current < 30 * 60 * 1000) return;
+    if (Date.now() - lastFetch.current < 30 * 60 * 1000) return;
 
-    setLoading(true);
-
-    authService.getProfiles().then(async (profiles) => {
+    (async () => {
+      setLoading(true);
+      const profiles = await authService.getProfiles();
       const ordered = [...profiles].sort((a, b) => a.name.localeCompare(b.name)).slice(0, 4);
       const results = await Promise.all(
         ordered.map(async (u) => {
@@ -33,15 +32,14 @@ export default function WeatherCard() {
         })
       );
 
-      if (!cancelled) {
-        const filled = results.length < 4
-          ? [...results, ...Array.from({ length: 4 - results.length }, () => ({ label: '—', temp: '—', condition: '—' }))]
-          : results;
-        setSlots(filled);
-        lastFetch.current = Date.now();
-        setLoading(false);
-      }
-    });
+      if (cancelled) return;
+      const filled = results.length < 4
+        ? [...results, ...Array.from({ length: 4 - results.length }, () => ({ label: '—', temp: '—', condition: '—' }))]
+        : results;
+      setSlots(filled);
+      lastFetch.current = Date.now();
+      setLoading(false);
+    })();
 
     return () => {
       cancelled = true;
@@ -49,8 +47,30 @@ export default function WeatherCard() {
   }, []);
 
   return (
-    <GlassCard padding={16} gap={8} style={{ flex: 1, height: '100%', minWidth: 0, minHeight: 0, overflow: 'hidden' }}>
-      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: 8, width: '100%' }}>
+    <GlassCard
+      padding={16}
+      gap={8}
+      style={{
+        flex: 1,
+        height: '100%',
+        minWidth: 0,
+        minHeight: 0,
+        overflow: 'hidden',
+        justifyContent: 'center',
+        alignItems: 'center',
+      }}
+    >
+      <div
+        style={{
+          display: 'grid',
+          gridTemplateColumns: 'repeat(4, minmax(0, 1fr))',
+          gap: 12,
+          width: 'min(100%, 360px)',
+          margin: '0 auto',
+          alignItems: 'center',
+          justifyItems: 'center',
+        }}
+      >
         {slots.map((slot, idx) => (
           <div
             key={idx}
